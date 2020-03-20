@@ -3,6 +3,13 @@ class ChatRoomsController < ApplicationController
 
   def index
     @chat_rooms = policy_scope(ChatRoom)
+    @chat_rooms.each do |chat_room|
+      chat_room.name = if chat_room.user_one == current_user
+                        chat_room.name = chat_room.user_two.username
+                      else 
+                        chat_room.name = chat_room.user_one.username
+                      end
+    end
   end
 
   def show
@@ -19,7 +26,6 @@ class ChatRoomsController < ApplicationController
   end
 
   def borrow
-    
     show
     render 'show'
   end

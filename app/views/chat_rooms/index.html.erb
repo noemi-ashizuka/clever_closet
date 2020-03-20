@@ -1,4 +1,4 @@
+<h1>Messages</h1>
 <% @chat_rooms.each do |chat| %>
-  <%= chat.name %>
-  <%= link_to "Enter chat #{chat.id}", chat_room_path(chat.id)%>
+  <%= link_to "#{chat.name}", chat_room_path(chat.id)%>
 <% end %>
