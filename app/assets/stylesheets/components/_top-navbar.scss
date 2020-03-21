@@ -51,3 +51,13 @@
     }
 
 }
+
+@media (min-width: 400px){
+  .top-navbar {
+    padding: 0;
+    .logo {
+      width: 20%;
+      height: 65px;
+    }
+  }
+}
