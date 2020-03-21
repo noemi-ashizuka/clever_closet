@@ -1,0 +1,8 @@
+<div class="chat-card">
+  <h3><%= link_to "#{chat.name}", chat_room_path(chat.id), style: "text-decoration: none; color: gray;"%></h3>
+  <% if chat.messages.any? %>
+   <p><%= chat.messages.last.content %></p>
+  <% else %>
+    <p>Chat with <%= chat.name %></p>
+  <% end %>
+</div>

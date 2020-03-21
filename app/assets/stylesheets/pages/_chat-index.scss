@@ -1,0 +1,25 @@
+.chat-list {
+  line-height: 16px;
+  
+  
+}
+
+.chat-card {
+  border: 1px solid rgb(173, 181, 189);
+  padding: 8px;
+  margin: 8px;
+  background-color: white;
+  border-radius: 4px;
+  h3 {
+    color: gray;
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+    color: grey;
+    border-left: 2px solid $accent-red;
+    padding-left: 4px;
+    margin-left: 24px;
+  }
+}

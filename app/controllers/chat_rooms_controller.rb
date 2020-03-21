@@ -4,11 +4,7 @@ class ChatRoomsController < ApplicationController
   def index
     @chat_rooms = policy_scope(ChatRoom)
     @chat_rooms.each do |chat_room|
-      chat_room.name = if chat_room.user_one == current_user
-                        chat_room.name = chat_room.user_two.username
-                      else 
-                        chat_room.name = chat_room.user_one.username
-                      end
+      name_chat(chat_room)
     end
   end
 
@@ -17,11 +13,7 @@ class ChatRoomsController < ApplicationController
     @message = Message.new(content: "Hi, can I borrow this?", item: @item) if params[:item_id]
     @chat_room = ChatRoom.includes(messages: :user).find(params[:id])
     @message = @message || Message.new
-    if @chat_room.user_one == current_user
-      @chat_room.name = @chat_room.user_two.username
-    else 
-      @chat_room.name = @chat_room.user_one.username
-    end
+    name_chat(@chat_room)
     authorize @chat_room
   end
 
@@ -64,6 +56,14 @@ class ChatRoomsController < ApplicationController
 
   def set_chat
     @chat_room = ChatRoom.find(params[:id])
+  end
+
+  def name_chat(chat_room)
+    chat_room.name = if chat_room.user_one == current_user
+      chat_room.name = chat_room.user_two.username
+    else 
+      chat_room.name = chat_room.user_one.username
+    end
   end
 end
 
