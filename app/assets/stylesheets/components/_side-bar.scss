@@ -1,0 +1,40 @@
+.side-bar {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .side-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(173, 181, 188, 0.5);
+    height: 100%;
+    width: 10%;
+    position: fixed;
+    z-index: 1;
+    padding-top: 32px;
+    .fa-envelope {
+      color: white;
+      font-size: 26px;
+
+    }
+  }
+
+  .side-icons {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin: 0 auto;
+    
+    .side-avatar {
+      padding: 32px;
+    }
+    
+    .side-icon {
+      padding: 32px;
+      margin-left: 4px;
+    }
+    
+    
+  }
+
+}

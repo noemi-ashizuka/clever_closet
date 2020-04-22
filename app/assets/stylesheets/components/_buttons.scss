@@ -139,3 +139,8 @@
   text-align: center;
 }
 
+@media (min-width: 640px) {
+  .btn-red-wide-profile {
+    width: 50%;
+  }
+}

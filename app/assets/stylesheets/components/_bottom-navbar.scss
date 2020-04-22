@@ -53,3 +53,8 @@
   right: -15px;
 }
 
+@media (min-width: 640px){
+  .bottom-navbar {
+    transform: translateY(100px);
+  }
+}

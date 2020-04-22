@@ -76,7 +76,7 @@
     margin-top: 10px;
   }
 }
-.tab-content button{
+.tab-content button {
   border-radius: 15px;
   width: 100px;
   margin: 0 auto;
@@ -123,4 +123,19 @@
 
 .progress-level {
   background-color: #f19999;
+}
+
+@media (min-width: 640px) {
+    .tab-content {
+      width: 90%;
+      margin-left: 10%;
+    }
+
+    .nav-item {
+      width: 50%;
+    }
+
+    .nav-pills {
+      margin-left: 10%;
+    }
 }
