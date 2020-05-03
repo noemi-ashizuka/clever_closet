@@ -28,8 +28,6 @@
   height: 40px;
   border-radius: 50%;
   margin-left: 20px;
-
-
 }
 
 #home-carousel {
@@ -189,4 +187,54 @@
 
 .gray-icon {
   color: grey;
+}
+
+@media (min-width: 768px) {
+  #home-carousel {
+    width: 100vw;
+    margin-top: -125px;
+    margin-left: -78px;
+    margin-right: -200px;
+  }
+  .carousel-inner {
+    width: 100%;
+    height: 600px;
+    padding: 0;
+  }
+
+  .first-slide {
+    height: 600px;
+    display: flex;
+
+    .container {
+      align-self: center;
+    }
+  }
+
+  .second-slide {
+    height: 600px;
+    display: flex;
+
+    .container {
+      align-self: center;
+    }
+  }
+
+  .third-slide {
+    height: 600px;
+    display: flex;
+
+    .container {
+      align-self: center;
+    }
+  }
+
+  .feed-header {
+    width: 100vw;
+    margin-left: -78px;
+  }
+
+  .feed-container {
+    width: 50%;
+  }
 }
