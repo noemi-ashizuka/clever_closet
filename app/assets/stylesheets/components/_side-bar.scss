@@ -6,15 +6,20 @@
   .side-bar {
     display: flex;
     flex-direction: column;
-    background-color: rgba(173, 181, 188, 0.5);
+    background-color: rgb(52, 52, 52);
     height: 100%;
     width: 10%;
     position: fixed;
     z-index: 1;
     padding-top: 32px;
+    
     .fa-envelope {
       color: white;
       font-size: 26px;
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 
@@ -43,11 +48,6 @@
         font-size: 18px;
         text-align: center;
       }
-
-    
     }
-    
-    
   }
-
 }
