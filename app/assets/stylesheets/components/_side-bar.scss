@@ -15,7 +15,6 @@
     .fa-envelope {
       color: white;
       font-size: 26px;
-
     }
   }
 
@@ -29,9 +28,23 @@
       padding: 32px;
     }
     
-    .side-icon {
-      padding: 32px;
-      margin-left: 4px;
+    .side-link {
+      text-decoration: none;
+      color: white;
+      font-size: 24px;
+      margin: 0 auto;
+      
+      .side-icon {
+        padding: 16px;
+        margin-left: 2px;
+      }
+
+      .side-text {
+        font-size: 18px;
+        text-align: center;
+      }
+
+    
     }
     
     

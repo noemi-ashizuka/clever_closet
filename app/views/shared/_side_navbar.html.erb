@@ -17,47 +17,47 @@
   </div>
   <%= link_to chat_rooms_path do %>
     <% current_page?(controller: "/chat_rooms", action: "index") ? icon_class = "icons-red" : icons_class = "" %>
-    <i class="fas fa-envelope side-icon <%= icon_class %> "></i>
+    <span class="side-link"><i class="fas fa-envelope side-icon <%= icon_class %> "></i><span class="side-text">Chat</span></span>
   <% end %>
     <!-- add links -->
     <%= link_to root_path do %>
       <% current_page?(controller: "/pages", action: "home") ? icon_class = "icons-red" : icons_class = "" %>
-      <i class="fas fa-home side-icon <%= icon_class %>"> </i>
+      <span class="side-link"><i class="fas fa-home side-icon <%= icon_class %>"></i><span class="side-text">Home</span></span>
     <% end %>
 
     <%= link_to users_path do %>
       <% current_page?(controller: "/users", action: "index") ? icon_class = "icons-red" : icons_class = "" %>
-      <i class="fas fa-user-friends side-icon <%= icon_class %>"></i>
+      <span class="side-link"><i class="fas fa-user-friends side-icon <%= icon_class %>"></i><span class="side-text">Friends</span></span>
     <% end %>
 
     <%= link_to new_item_path do %>
       <% current_page?(controller: "/items", action: "new") ? icon_class = "icons-red" : icons_class = "" %>
-      <i class="far fa-plus-square side-icon <%= icon_class %>"></i>
+      <span class="side-link"><i class="far fa-plus-square side-icon <%= icon_class %>"></i><span class="side-text">Add item</span></span>
     <% end %>
 
     <%= link_to items_path do %>
       <% current_page?(controller: "/items", action: "index") ? icon_class = "icons-red" : icons_class = "" %>
-      <i class="fas fa-search side-icon <%= icon_class %>"></i>
+      <span class="side-link"><i class="fas fa-search side-icon <%= icon_class %>"></i><span class="side-text">Closet</span></span>
     <% end %>
 
     <!-- add notifications route -->
     <% if current_user.nil? %>
     <%= link_to items_path do %>
-    <i class="fas fa-bell side-icon" id="bell"></i>
+    <span class="side-link"><i class="fas fa-bell side-icon" id="bell"></i><span class="side-text">Alerts</span></span>
     <% end %>
     <% elsif Notification.unread_count(current_user) > 9 %>
       <%= link_to  user_notification_path(current_user), class: "bell" do %>
-        <i class="fas fa-bell side-icon"></i>
+        <span class="side-link"><i class="fas fa-bell side-icon"></i><span class="side-text">Alerts</span></span>
         <div class="red-badge"></div>
         </div>
       <% end %>
     <% elsif  Notification.unread_count(current_user) == 0%>
       <%= link_to  user_notification_path(current_user), class: "bell" do %>
-        <i class="fas fa-bell side-icon"></i>
+        <span class="side-link"><i class="fas fa-bell side-icon"></i><span class="side-text">Alerts</span></span>
       <% end %>
     <% else %>
     <%= link_to  user_notification_path(current_user), class: "bell" do %>
-      <i class="fas fa-bell side-icon"></i>
+      <span class="side-link"><i class="fas fa-bell side-icon"></i><span class="side-text">Alerts</span></span>
       <div class="red-badge">
         <%= Notification.unread_count(current_user) %>
       </div>
