@@ -48,7 +48,7 @@
     </div>
   <% end %>
   <p class="par-gray mt-4">Related items</p>
-  <div class="scrolling-wrapper-flexbox">
+  <div class="scrolling-wrapper-flexbox rel-items-container">
     <% @related_items.each do |item| %>
       <%= link_to item_path(item), class: "card-polaroid-small" do %>
         <%= cl_image_tag item.photo.key, height: 100, width: 100, crop: :fill, class: "item-img" %>
