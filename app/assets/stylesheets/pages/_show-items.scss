@@ -31,10 +31,12 @@
   background-color: white;
   padding: 32px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  
   img {
     border: 1px solid #dedede;
+    width: 90%;
+    height: 90%;
   }
-
 }
 
 .card-polaroid-small {
@@ -46,6 +48,7 @@
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
   margin: 8px;
   margin-bottom: 16px;
+  
   img {
     border: 1px solid #dedede;
   }
@@ -55,19 +58,19 @@
   display: flex;
   width: 95vw;
   justify-content: flex-end;
+  
   .selection-icons {
     background-color: white;
     border-radius: 16px 16px 0 0;
     box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.1);
     padding: 0 16px;
     position: relative;
+    
     .fa-pencil-alt {
       color: gray;
       opacity: 0.5;
       font-size: 16px;
       margin-top: 8px;
-
-
     }
 
     .fa-times {
@@ -90,6 +93,7 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 16px;
+      
       .fa-pencil-alt {
         color: gray;
         opacity: 0.5;
@@ -97,8 +101,6 @@
         height: 40px;
         font-size: 25px;
         margin-top: 8px;
-
-
       }
 
       .fa-times {
@@ -133,4 +135,33 @@
 
 .show-card-box {
   min-width: 100px;
+}
+
+
+@media (min-width: 800px) {
+  .card-polaroid {
+    width: 50vw;
+    height: 600px;
+    
+    img {
+      width: 500px;
+      height: 500px;
+      border: none;
+    }
+  }
+
+  .icons-side {
+    width: 75vw;
+    //justify-content: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .card-polaroid {
+
+    img {
+      width: 400px;
+      height: 500px;
+    }
+  }
 }
