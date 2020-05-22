@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 930px) {
   .side-bar {
     display: flex;
     flex-direction: column;
@@ -31,6 +31,7 @@
     
     .side-avatar {
       padding: 32px;
+      margin-left: 20px;
     }
     
     .side-link {
@@ -47,6 +48,7 @@
       .side-text {
         font-size: 16px;
         text-align: center;
+        align-self: center;
       }
     }
   }

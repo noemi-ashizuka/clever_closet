@@ -54,7 +54,7 @@
 
 @media (min-width: 400px){
   .top-navbar {
-    padding: 0;
+    padding: 10px;
     .logo {
       width: 20%;
       height: 65px;
@@ -62,7 +62,7 @@
   }
 }
 
-@media (min-width: 640px){
+@media (min-width: 929px){
   .top-navbar {
     transform: translateY(-100px);
   }
