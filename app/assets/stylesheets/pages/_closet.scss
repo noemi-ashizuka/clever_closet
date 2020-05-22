@@ -1,17 +1,22 @@
 .your-items {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  //grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
 .card-polaroid-medium {
-  height: 260px;
+  //height: 260px;
   background-color: white;
   padding: 8px;
-  padding-bottom: 24px;
+  //padding-bottom: 24px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
   margin: 8px;
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  
     .item-img {
       margin-bottom: 4px;
       margin-right: 5px;
@@ -23,15 +28,28 @@
       width: 35px;
       height: 35px;
       border-radius: 50%;
-
     }
 
-}
+    .card-polaroid-bottom {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px;
+      margin-top: 4px;
+    }
 
-.card-polaroid-bottom {
-  display: flex;
-  justify-content: space-between;
-  padding: 4px;
+  }
+
+@media (min-width: 860px) {
+  .your-items {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .card-polaroid-medium {
+    .item-img {
+      width: 200px;
+      height: 250px;
+    }
+  }
 }
 
 
