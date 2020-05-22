@@ -12,15 +12,6 @@
   h1 {
     font-size:24px;
   }
-  .show-description {
-    margin-top: 12px;
-    margin-bottom: 12px;
-
-    p {
-      margin-bottom: 0;
-      color: gray;
-    }
-  }
 
 }
 
@@ -111,6 +102,16 @@
         font-size: 25px;
         margin-top: 8px;
       }
+
+      .show-description {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    
+        p {
+          margin-bottom: 0;
+          color: gray;
+        }
+      }
     }
 
     .par-gray {
@@ -154,9 +155,15 @@
     width: 75vw;
     //justify-content: center;
   }
+
+  .show-card {
+    .show-description {
+      margin-left: 125px;
+    }
+  }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .card-polaroid {
 
     img {
