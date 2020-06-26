@@ -1,5 +1,5 @@
 
-#headerfont-badge{
+#headerfont-badge {
   font-size: 24px;
   color: #6c757d;
   position: absolute;
@@ -7,7 +7,7 @@
   left: 20px;
 }
 
-#headerfont{
+#headerfont {
   font-size: 24px;
   color: #6c757d;
   position: absolute;
@@ -15,12 +15,13 @@
   left: 20px;
 }
 
-.gear{
+.gear {
   text-align: right;
   margin-right: 4px;
   font-size: 25px;
 }
-.profile-title{
+
+.profile-title {
   margin-bottom: 10px;
 }
 
@@ -39,7 +40,7 @@
     color: gray;
 }
 
-.nav-item{
+.nav-item {
   width: 50%;
   text-align: center;
 }
@@ -52,6 +53,7 @@
   border-radius: 30px;
   height: 100px;
 }
+
 .nav-pills .nav-link.active{
   background: #fff;
   color: #ef6666;
@@ -127,22 +129,22 @@
 }
 
 @media (min-width: 640px) {
-    .tab-content {
-      width: 90%;
-      margin-left: 10%;
-    }
+  .tab-content {
+    width: 90%;
+    margin-left: 10%;
+  }
 
-    .nav-item {
-      width: 50%;
-    }
+  .nav-item {
+    width: 50%;
+  }
 
-    .nav-pills {
-      margin-left: 10%;
-    }
+  .nav-pills {
+    margin-left: 10%;
+  }
 
-    .card-profile-show {
-      width: 50%;
-      padding: 24px;
-      margin-left: 120px;
-    }
+  .card-profile-show {
+    width: 50%;
+    padding: 24px;
+    margin-left: 120px;
+  }
 }
