@@ -1,36 +1,33 @@
 <!-- friends page search results -->
 
   <%= form_tag users_path, method: :get do %>
-    <div class="line-up">
+    <div class="line-up bar-center">
       <%= text_field_tag :query,
       params[:query],
       class: "form-control mb-1",
       placeholder: "Find a Friend"
-    %>
-    <%= button_tag :submit do %>
+      %>
+      <%= button_tag :submit do %>
         <i class="fas fa-search"></i>
-    <% end %>
+      <% end %>
     </div>
   <% end %>
   <% if @users == nil %>
   <% else %>
-  <% @users.reject{|u| u == current_user}.each do |user| %>
+    <% @users.reject{|u| u == current_user}.each do |user| %>
       <div class="friend-results" style="display: flex; align-items: center; justify-content: space-between;">
-    <%= link_to user_path(user) do %>
-    <% if user.photo.attached? %>
-      <%= cl_image_tag user.photo.key, height: 250, width: 300, crop: :fill, class: "avatar-profile" %>
-    <% else %>
-          <%= image_tag 'blank_avatar.png', class: "avatar-profile" %>
-    <% end %>
-    <% end %>
-        <div class="avatar-username" style="
-    display: flex;
-    align-items: flex-end;">
-        <p> <%= user.username %> </p>
+        <%= link_to user_path(user) do %>
+          <% if user.photo.attached? %>
+            <%= cl_image_tag user.photo.key, height: 250, width: 300, crop: :fill, class: "avatar-profile" %>
+          <% else %>
+            <%= image_tag 'blank_avatar.png', class: "avatar-profile" %>
+          <% end %>
+        <% end %>
+        <div class="avatar-username" style="display: flex; align-items: flex-end;">
+          <p> <%= user.username %> </p>
+        </div>
+        <%= render "friendship", user: user %>
       </div>
-      <%= render "friendship", user: user %>
-      </div>
-  <% end %>
+      <% end %>
   <% end %>
   <%= render "index_tab"%>
-
