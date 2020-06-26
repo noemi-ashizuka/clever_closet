@@ -15,7 +15,6 @@ module Notifications
 
     end
 
-
     private
 
     def notifications
