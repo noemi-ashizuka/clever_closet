@@ -1,8 +1,3 @@
-<!-- <div class="search">
-  <input type="text" placeholder="search">
-</div> -->
-<!-- <div class="banner">
-</div> -->
 <div id="home-carousel" class="carousel slide" data-ride="carousel" data-interval="8000">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -12,10 +7,7 @@
             Bigger Impact.</h1>
           <p>Using CleverCloset can help reduce your overall carbon footprint.</p>
           <div class="d-flex justify-content-center">
-            <%= link_to new_item_path do %>
-              <% current_page?(controller: "/items", action: "new") %>
-              <a class="btn btn-red">Start Your Closet</a>
-            <% end %>
+            <%= link_to "Start your Closet", new_item_path, class:"btn btn-red", style: "text-decoration:none;" %>
           </div>
         </div>
       </div>
@@ -27,7 +19,7 @@
             Go Further</h1>
           <p>Send us your gently used clothes and we'll keep them out of the landfill.</p>
           <div class="d-flex justify-content-center">
-            <a class="btn btn-red" href="#">Donate Today</a>
+            <%= link_to "Donate Today", items_path, class:"btn btn-red", style: "text-decoration:none;" %>
           </div>
         </div>
       </div>
@@ -38,7 +30,7 @@
           <h1>Simplify Your Style</h1>
           <p>Start building outfits with your friends!</p>
           <div class="d-flex justify-content-center">
-            <a class="btn btn-red" href="#">Create A Look</a>
+            <%= link_to "Create a Look", new_user_look_path(current_user.id), class:"btn btn-red", style: "text-decoration:none;" %>
           </div>
         </div>
       </div>
